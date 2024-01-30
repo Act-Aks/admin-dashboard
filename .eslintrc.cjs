@@ -1,6 +1,6 @@
 /* eslint-env node */
 
-const path = require('path');
+const path = require('path')
 
 /** @type {import("eslint").Linter.Config} */
 const config = {
@@ -176,6 +176,6 @@ const config = {
     },
   },
   root: true,
-};
+}
 
-module.exports = config;
+module.exports = config
