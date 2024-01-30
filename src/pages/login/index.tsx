@@ -1,4 +1,4 @@
-import { AuthPage } from '@refinedev/antd'
+import { AuthPage } from '@refinedev/antd';
 
 export const Login = (): JSX.Element => {
   return (
@@ -8,5 +8,5 @@ export const Login = (): JSX.Element => {
         initialValues: { email: 'demo@refine.dev', password: 'demodemo' },
       }}
     />
-  )
-}
+  );
+};

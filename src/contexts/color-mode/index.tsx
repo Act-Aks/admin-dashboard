@@ -1,34 +1,34 @@
-import { RefineThemes } from '@refinedev/antd'
-import { ConfigProvider, theme } from 'antd'
-import { createContext, useEffect, useState, type PropsWithChildren } from 'react'
+import { RefineThemes } from '@refinedev/antd';
+import { ConfigProvider, theme } from 'antd';
+import { createContext, type PropsWithChildren, useEffect, useState } from 'react';
 
 type ColorModeContextType = {
-  mode: string
-  setMode: (mode: string) => void
-}
+  mode: string;
+  setMode: (mode: string) => void;
+};
 
-export const ColorModeContext = createContext<ColorModeContextType>({} as ColorModeContextType)
+export const ColorModeContext = createContext<ColorModeContextType>({} as ColorModeContextType);
 
 export const ColorModeContextProvider: React.FC<PropsWithChildren> = ({ children }) => {
-  const colorModeFromLocalStorage = localStorage.getItem('colorMode')
-  const isSystemPreferenceDark = window?.matchMedia('(prefers-color-scheme: dark)').matches
+  const colorModeFromLocalStorage = localStorage.getItem('colorMode');
+  const isSystemPreferenceDark = window?.matchMedia('(prefers-color-scheme: dark)').matches;
 
-  const systemPreference = isSystemPreferenceDark ? 'dark' : 'light'
-  const [mode, setMode] = useState(colorModeFromLocalStorage ?? systemPreference)
+  const systemPreference = isSystemPreferenceDark ? 'dark' : 'light';
+  const [mode, setMode] = useState(colorModeFromLocalStorage ?? systemPreference);
 
   useEffect(() => {
-    window.localStorage.setItem('colorMode', mode)
-  }, [mode])
+    window.localStorage.setItem('colorMode', mode);
+  }, [mode]);
 
   const setColorMode = (): void => {
     if (mode === 'light') {
-      setMode('dark')
+      setMode('dark');
     } else {
-      setMode('light')
+      setMode('light');
     }
-  }
+  };
 
-  const { darkAlgorithm, defaultAlgorithm } = theme
+  const { darkAlgorithm, defaultAlgorithm } = theme;
 
   return (
     <ColorModeContext.Provider
@@ -47,5 +47,5 @@ export const ColorModeContextProvider: React.FC<PropsWithChildren> = ({ children
         {children}
       </ConfigProvider>
     </ColorModeContext.Provider>
-  )
-}
+  );
+};

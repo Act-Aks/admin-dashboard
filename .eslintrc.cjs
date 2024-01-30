@@ -1,9 +1,23 @@
 /* eslint-env node */
 
-const path = require('path')
+const path = require('path');
 
 /** @type {import("eslint").Linter.Config} */
 const config = {
+  ignorePatterns: [
+    '*.generated.*',
+    '*.html',
+    '.eslintrc.js',
+    '__mocks__',
+    'babel.config.js',
+    'codegen.ts',
+    'commitlint.config.ts',
+    'coverage',
+    'dist',
+    'jest.config.ts',
+    'node_modules',
+    'vite.config.ts',
+  ],
   overrides: [
     {
       files: ['*.js', '*.jsx', '*.cjs'],
@@ -162,6 +176,6 @@ const config = {
     },
   },
   root: true,
-}
+};
 
-module.exports = config
+module.exports = config;
