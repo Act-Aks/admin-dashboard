@@ -43,7 +43,7 @@
     "build": "tsc && refine build",
     "preview": "refine start",
     "refine": "refine",
-    "lint": "eslint --fix '**/*.{js,jsx,ts,tsx}' .",
+    "lint": "eslint --fix '**/*.{js,jsx,ts,tsx}' --ignore-path .gitignore .",
     "format": "prettier --write '**/*.{js,jsx,ts,tsx,cjs,mjs,json}'",
     "prepare": "husky"
   },

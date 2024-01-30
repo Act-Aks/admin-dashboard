@@ -161,6 +161,7 @@ const config = {
       version: 'detect',
     },
   },
+  root: true,
 }
 
 module.exports = config
