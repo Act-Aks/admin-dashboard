@@ -14,8 +14,7 @@ const config = {
   importOrder: ['^@/(.*)$', '<THIRD_PARTY_MODULES>', '^[./]'],
   importOrderSeparation: true,
   importOrderSortSpecifiers: true,
-  // importOrderParserPlugins: ['classProperties', 'decorators-legacy', 'typescript', 'jsx'],
-  // importOrderMergeDuplicateImports: true,
+  importOrderParserPlugins: ['classProperties', 'decorators-legacy', 'typescript', 'jsx'],
   importOrderCaseInsensitive: true,
 }
 

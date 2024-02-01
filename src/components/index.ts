@@ -1,1 +1,2 @@
-export { Header } from './header'
+export { default as CustomAvatar } from './customAvatar'
+export { default as Layout } from './layout'

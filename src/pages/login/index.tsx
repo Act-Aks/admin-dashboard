@@ -1,11 +1,13 @@
+import { authCredentials } from '@/providers'
+
 import { AuthPage } from '@refinedev/antd'
 
-export const Login = (): JSX.Element => {
+export const Login: React.FC = () => {
   return (
     <AuthPage
       type="login"
       formProps={{
-        initialValues: { email: 'demo@refine.dev', password: 'demodemo' },
+        initialValues: authCredentials,
       }}
     />
   )

@@ -1,5 +1,5 @@
 import { AuthPage } from '@refinedev/antd'
 
-export const Register = (): JSX.Element => {
+export const Register: React.FC = () => {
   return <AuthPage type="register" />
 }

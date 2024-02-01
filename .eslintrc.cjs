@@ -17,6 +17,9 @@ const config = {
     'jest.config.ts',
     'node_modules',
     'vite.config.ts',
+    'src/graphql/*.types.*',
+    'src/graphql/*.schema.*',
+    'graphql.config.ts',
   ],
   overrides: [
     {

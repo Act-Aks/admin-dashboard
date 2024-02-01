@@ -40,9 +40,9 @@
     "types": ["vite/client", "node"],
     "useUnknownInCatchVariables": true,
 
-    "baseUrl": ".",
+    "baseUrl": "./src",
     "paths": {
-      "@/*": ["src/*"],
+      "@/*": ["./*"],
     },
   },
   "include": ["src", "vite.config.ts"],

@@ -21,6 +21,11 @@
   "devDependencies": {
     "@commitlint/cli": "^18.6.0",
     "@commitlint/config-conventional": "^18.6.0",
+    "@graphql-codegen/cli": "5.0.0",
+    "@graphql-codegen/import-types-preset": "^3.0.0",
+    "@graphql-codegen/typescript": "4.0.1",
+    "@graphql-codegen/typescript-operations": "4.0.1",
+    "@parcel/watcher": "^2.4.0",
     "@trivago/prettier-plugin-sort-imports": "^4.3.0",
     "@types/node": "^18.16.2",
     "@types/react": "^18.0.0",
@@ -34,9 +39,10 @@
     "eslint-plugin-react-refresh": "^0.3.4",
     "husky": "^9.0.7",
     "lint-staged": "^15.2.0",
-    "prettier": "3.2.4",
-    "typescript": "^4.7.4",
-    "vite": "^4.3.1"
+    "prettier": "^3.2.4",
+    "typescript": "^5.3.3",
+    "vite": "^4.3.1",
+    "vite-tsconfig-paths": "^4.3.1"
   },
   "scripts": {
     "preinstall": "npx only-allow yarn",
@@ -46,7 +52,8 @@
     "refine": "refine",
     "lint": "eslint --fix '**/*.{js,jsx,ts,tsx}' .",
     "format": "prettier --write '**/*.{js,jsx,ts,tsx,cjs,mjs,json}'",
-    "prepare": "husky"
+    "prepare": "husky",
+    "codegen": "graphql-codegen"
   },
   "engines": {
     "node": ">=20.10.0",
