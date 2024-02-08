@@ -1,3 +1,9 @@
+import { Layout } from '@/components'
+import { resources } from '@/config/resources'
+import { routes } from '@/constants'
+import { CompanyList, ForgotPassword, Home, Login, Register } from '@/pages'
+import { authProvider, dataProvider, liveProvider } from '@/providers'
+
 import { useNotificationProvider } from '@refinedev/antd'
 import '@refinedev/antd/dist/reset.css'
 import { Authenticated, GitHubBanner, Refine } from '@refinedev/core'
@@ -10,11 +16,6 @@ import routerBindings, {
 } from '@refinedev/react-router-v6'
 import { App as AntdApp } from 'antd'
 import { BrowserRouter, Outlet, Route, Routes } from 'react-router-dom'
-
-import { Layout } from './components'
-import { routes } from './constants'
-import { ForgotPassword, Home, Login, Register } from './pages'
-import { authProvider, dataProvider, liveProvider } from './providers'
 
 function App(): JSX.Element {
   return (
@@ -29,6 +30,7 @@ function App(): JSX.Element {
               notificationProvider={useNotificationProvider}
               routerProvider={routerBindings}
               authProvider={authProvider}
+              resources={resources}
               options={{
                 syncWithLocation: true,
                 warnWhenUnsavedChanges: true,
@@ -51,6 +53,7 @@ function App(): JSX.Element {
                   }
                 >
                   <Route index path={routes.home} element={<Home />} />
+                  <Route index path={routes.companies} element={<CompanyList />} />
                 </Route>
               </Routes>
               <RefineKbar />
